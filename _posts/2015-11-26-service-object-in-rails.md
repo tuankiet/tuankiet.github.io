@@ -89,3 +89,72 @@ module <Rails Application Name>
   end
 end
 {%endhighlight%}
+
+Sau đây là ví dụ về implement service
+
+{%highlight ruby%}
+# Sending notifications to users after a ticket has been purchased
+class UserNotificationService
+  def initialize(user)
+    @user = user
+  end
+
+  # send notifications
+  def notify(ticket)
+    Email.send_email_to_user(@user.email, ticket)
+    Sms.send(@user.mobile, ticket) if @user.mobile
+  end
+end
+{%endhighlight%}
+
+Và sau này chúng ta có thể thêm xóa logic nếu có sự thay đổi. Và không ảnh hưởng đụng chạm gì tới model User.
+
+Cố gắng đề cho model thực hiện đúng chức năng của nó.
+
+{%highlight ruby%}
+ # app/controllers/tickets_controller.rb #create
+
+   if @ticket.save
+     UserNotificationService.new(current_user).notify(@ticket)
+     # code
+   else
+     # code
+   end
+{%endhighlight%}
+
+## How about testing service object
+
+!(service object testing)[http://i.imgur.com/wBnfAIC.png]
+
+Và code test ví dụ, dùng Rspec
+
+{%highlight ruby%}
+require 'rails_helper'
+
+describe UserNotificationService do
+  let(:user) { FactoryGirl.create(:user, mobile: mobile) }
+  let(:ticket) { FactoryGirl.create(:ticket) }
+
+  subject(:notification) do
+    UserNotificationService.new(user).notify(ticket)
+  end
+
+  context 'when the user does not have a mobile number' do
+    let(:mobile) { nil }
+
+    it 'send an email' do
+      expect(Email).to receive(:send_email_to_user)
+      notification
+    end
+
+    it 'does not send an SMS' do
+      expect(Sms).to_not receive(:send)
+      notification
+    end
+  end
+end
+{%endhighlight%}
+
+Implementing a service is not too hard, right?
+
+Happy Coding!
