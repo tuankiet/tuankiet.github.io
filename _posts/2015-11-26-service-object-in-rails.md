@@ -1,19 +1,17 @@
 ---
 layout: post
-title:  "Service object in Rails"
+title:  "Service Objects in Rails Framework"
 date:   2015-11-26
 categories: ruby
 ---
 
-## Keeping your classes small and maintainable with Service Objects
-
-Nếu bạn đã biết về Rails Framework thì hản bạn đã biết về cấu trúc MVC của nó, với các directories đã được định nghĩa sẵn như Controller, Model và View.
-
-Đối với ứng dụng nhỏ, cấu trúc trên đã đủ tốt. Nhưng mà khi ứng dụng phát triển lên, khách hàng yêu cầu ngày càng nhiều tính năng thì có đôi lúc người lập trình viên không biết nên viết đoạn code ở đâu là hợp lý, là dễ dàng cho tìm kiếm và maintain chúng.
+Nếu bạn đã biết về Rails Framework thì hản bạn đã biết về cấu trúc MVC của nó, với các directories đã được định nghĩa sẵn như Controller, Model và View. Đối với ứng dụng nhỏ, cấu trúc trên đã đủ tốt. Nhưng mà khi ứng dụng phát triển lên, khách hàng yêu cầu ngày càng nhiều tính năng thì có đôi lúc người lập trình viên không biết nên viết đoạn code ở đâu là hợp lý, là dễ dàng cho tìm kiếm và maintain chúng.
 
 Ví dụ ở đây, tôi nói đến những bussiness logic. Đơn thuần những logic này ta không biết đặt đâu để có thể dễ dàng thay đổi khi yêu cầu thay đổi.
 
 Trong hoàn cảnh này, phát triển logic trong các `service objects` là một trong những ý tưởng tốt. Nó giúp ta tách ra khỏi các Model - vốn model là làm việc với CRUD của DB.
+
+> Keeping your classes small and maintainable with Service Objects.
 
 ## Explain an Example
 
@@ -124,7 +122,7 @@ Cố gắng đề cho model thực hiện đúng chức năng của nó.
 
 ## How about testing service object
 
-!(service object testing)[http://i.imgur.com/wBnfAIC.png]
+![service object testing](http://i.imgur.com/wBnfAIC.png)
 
 Và code test ví dụ, dùng Rspec
 
