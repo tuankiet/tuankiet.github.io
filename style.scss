@@ -114,8 +114,8 @@ strong, b {
 }
 
 .main-content img {
-  width: 500px;
-  max-height: 100%;
+  max-width: 60%;
+  max-height: 60%;
   display: block;
   margin: 0 auto;
 }
@@ -228,8 +228,7 @@ nav {
 
   @include mobile {
     float: none;
-    margin-top: 9px;
-    display: block;
+    margin-top: 10px;
     font-size: 16px;
   }
 
@@ -241,8 +240,9 @@ nav {
     letter-spacing: 1px;
 
     @include mobile {
-      margin: 0 10px;
+      margin: 0px 10px 10px 0px;
       color: $blue;
+      display: inline-block;
     }
   }
 }
@@ -430,7 +430,7 @@ footer {
 }
 @media screen and (min-width: 64em) {
     .main-content {
-        max-width: 64rem;
+        max-width: 58rem;
         padding: 2rem 6rem;
         margin: 0 auto;
         font-size: 1.1rem;
