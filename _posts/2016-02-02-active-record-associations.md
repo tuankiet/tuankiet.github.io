@@ -52,12 +52,12 @@ class Physician < ActiveRecord::Base
   has_many :appointments
   has_many :patients, through: :appointments
 end
- 
+
 class Appointment < ActiveRecord::Base
   belongs_to :physician
   belongs_to :patient
 end
- 
+
 class Patient < ActiveRecord::Base
   has_many :appointments
   has_many :physicians, through: :appointments
@@ -71,15 +71,120 @@ class Document < ActiveRecord::Base
   has_many :sections
   has_many :paragraphs, through: :sections
 end
- 
+
 class Section < ActiveRecord::Base
   belongs_to :document
   has_many :paragraphs
 end
- 
+
 class Paragraph < ActiveRecord::Base
   belongs_to :section
 end
 {% endhighlight %}
 
 The `has_one :through` association. Like `has_many :through`, it indicates connection through the third model, but it has one connection.
+
+The `has_and_belongs_to_many` association, indicates many-to-many connection, with no intervaling model.
+
+Example: create model Assembly and model Part, each assembly has many parts, and each part has many assemblies. But we don't need create model interval such as assembly_part.
+
+{% highlight ruby %}
+class Assembly < ActiveRecord::Base
+  has_and_belongs_to_many :parts
+end
+
+class Part < ActiveRecord::Base
+  has_and_belongs_to_many :assemblies
+end
+
+class CreateAssembliesAndParts < ActiveRecord::Migration
+  def change
+    create_table :assemblies do |t|
+      t.string :name
+      t.timestamps null: false
+    end
+
+    create_table :parts do |t|
+      t.string :part_number
+      t.timestamps null: false
+    end
+
+    create_table :assemblies_parts, id: false do |t|
+      t.belongs_to :assembly, index: true
+      t.belongs_to :part, index: true
+    end
+  end
+end
+{% endhighlight %}
+
+> Polymorphic Associations
+
+With polymorphic assocation, one model can belongs to more then one model, on a single association. You can think a `polymorphic belongs_to` declare as setting up `interface` that any other model can use.
+
+Example: you have picture model, that belongs to either an employee model or a product model.
+
+{% highlight ruby %}
+class Picture < ActiveRecord::Base
+  belongs_to :imageable, polymorphic: true
+end
+
+class Employee < ActiveRecord::Base
+  has_many :pictures, as: :imageable
+end
+
+class Product < ActiveRecord::Base
+  has_many :pictures, as: :imageable
+end
+{% endhighlight %}
+
+You can retrive pictures by `@employee.pictures` and `@product.pictures`.
+You can get parent of picture by `@picture.imageable`, you may declare both a foreign key column and type column in the model the declare the polymorphic interface.
+
+{% highlight ruby %}
+class CreatePictures < ActiveRecord::Migration
+  def change
+    create_table :pictures do |t|
+      t.string :name
+      t.integer :imageable_id
+      t.string :imageable_type
+      t.timestamps null: false
+    end
+
+    add_index :pictures, :imageable_id
+  end
+end
+
+// this migration can be simplified by t.references from
+
+class CreatePictures < ActiveRecord::Migration
+  def change
+    create_table :pictures do |t|
+      t.string :name
+      t.references :imageable, polymorphic: true, index: true
+      t.timestamps null: false
+    end
+  end
+end
+{% endhighlight %}
+
+> Self Joins
+
+Sometime, you will find a model that should have a relation itself. Example, you want to store all `employees` in single model, but you want to know who is manager or who is subordinates. It mean you can trace relationship between manager and subordinates.
+
+{% highlight ruby %}
+class Employee < ActiveRecord::Base
+  has_many :subordinates, class_name: "Employee", foreign_key: "manager_id"
+  belongs_to :manager, class_name: "Employee"
+end
+// With this set-up you can retrive, @employee.manager and @employee.subordinates
+
+// In migration
+class CreateEmployees < ActiveRecord::Migration
+  def change
+    create_table :employees do |t|
+      t.references :manager, index: true
+      t.timestamps null: false
+    end
+  end
+end
+{% endhighlight %}
