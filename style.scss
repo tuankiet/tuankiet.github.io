@@ -52,14 +52,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 26px;
   a {
     color: inherit;
   }
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 h3 {
@@ -161,7 +161,6 @@ strong, b {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
 }
 
 .masthead {
@@ -252,7 +251,7 @@ nav {
 //
 
 .posts > .post {
-  padding-bottom: 2em;
+  padding-bottom: 0.5em;
   border-bottom: 1px solid $lightGray;
 }
 
@@ -307,10 +306,9 @@ footer {
 .main-content h4,
 .main-content h5,
 .main-content h6 {
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     font-weight: normal;
-    color: #159957;
 }
 .main-content p {
     margin-bottom: 1em;
@@ -430,21 +428,18 @@ footer {
 }
 @media screen and (min-width: 64em) {
     .main-content {
-        max-width: 58rem;
-        padding: 2rem 6rem;
+        max-width: 50rem;
         margin: 0 auto;
         font-size: 1.1rem;
     }
 }
 @media screen and (min-width: 42em) and (max-width: 64em) {
     .main-content {
-        padding: 2rem 4rem;
         font-size: 1.1rem;
     }
 }
 @media screen and (max-width: 42em) {
     .main-content {
-        padding: 2rem 1rem;
         font-size: 1rem;
     }
 }
