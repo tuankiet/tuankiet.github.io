@@ -12,10 +12,11 @@ You can define methods, classes at during runtime and you can reopen predefined 
 Metaprogramming make code clean and DRY.
 
 You must know in Ruby:
-- understanding `self`
-- class methods
-- instance methods
-- singleton methods
+
+  - understanding `self`
+  - class methods
+  - instance methods
+  - singleton methods
 
 > Everything in Ruby is a Object, Every behaviors is a methods call
 
@@ -78,11 +79,15 @@ end
 {% endhighlight %}
 
 create instance of `Developer`: `dever = Developer.new`
+
 call instance methods: `dever.frontend => 'inside instance method, self is: #<Developer:0x00000003321538>'`
+
 call singleton methods or class methods, `:backend is singleton methods of class Developer`: `Developer.backend => 'inside class method, self is: Developer'`
 
 You can show instance methods of one Object by using `:instance_methods false`
+
 `p dever.class.instance_methods false` => '[:frontend]'
+
 `p developer.class.singleton_class.instance_methods false` => '[:backend]'
 
 Summary, `class << self` syntax used to opens up self's singleton class
