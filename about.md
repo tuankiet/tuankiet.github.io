@@ -1,12 +1,16 @@
 ---
 layout: page
-title: My Resume
+title: My Experience
 permalink: /about/
 ---
 
-Nguyen Vo Tuan Kiet (Male - 24 years old - From Kien Giang Province)
+Kiet Nguyen (Male - 23 years old - Ho Chi Minh City)
 
-Senior Rails Developer (2 years) | Full-Stack Developer | [kietdev38@gmail.com](mailto:kietdev38@gmail.com)
+Full name: Nguyen Vo Tuan Kiet
+
+Github profile: [@tuankiet](https://github.com/tuankiet)
+
+Ruby On Rails Developer (2 years) | Full-Stack Developer | [kietdev38@gmail.com](mailto:kietdev38@gmail.com)
 
 # Experience
 
@@ -14,14 +18,18 @@ Senior Rails Developer (2 years) | Full-Stack Developer | [kietdev38@gmail.com](
 
 Jan 2014 - Present:
 
+* VietNam
+
 - [Flightbooking.vn](http://flightbooking.vn)
 - [Jobbox.vn](http://jobbox.vn)
 - [Topprice.vn](http://topprice.vn)
+
+* Japan
+
 - [Ryokou-ex.jp](http://ryokou-ex.jp)
 - [See-sow.com](http://see-sow.com)
 - [Smocca.jp](http://smocca.jp)
 - [Chintai-ex.jp](http://Chintai-ex.jp)
-- [Shipbean.com](http://shipbean.com)
 
 # Education
 
@@ -29,9 +37,7 @@ Jan 2014 - Present:
 
 Apr 2015:
 
-Ho Chi Minh City University of Technology
-
-Bachelor's Degree in Computer Science/Information Technology
+Learned Ho Chi Minh City University of Technology
 
 # Skills
 
@@ -53,10 +59,10 @@ Bachelor's Degree in Computer Science/Information Technology
 
 ---
 
-Can work: Back-end, Server deployment, Front-end.
+Preferred about job description: Full-stack web development, start-up projects.
 
-Expected salary: 800USD
+Can work: Back-end, Server deployment, Front-end.
 
 Preferred work location: Ho Chi Minh City
 
-Preferred about job description: Full-stack web development, start-up projects.
+Stay Hungry.
