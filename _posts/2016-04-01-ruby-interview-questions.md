@@ -46,4 +46,4 @@ hash.keys.map(&:to_s).sort_by(&:length)
 
 `super()` invoke the parent method without any arguments
 
-continue updated : (link)[https://www.toptal.com/ruby/interview-questions] and (link)[https://gist.github.com/ryansobol/5252653]
+continue updated : [link](https://www.toptal.com/ruby/interview-questions) and [link](https://gist.github.com/ryansobol/5252653)
