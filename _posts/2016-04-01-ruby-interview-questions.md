@@ -5,7 +5,7 @@ date: 2016-04-01
 categories: ruby
 ---
 
-# Some ruby questions
+> Some ruby questions
 
 1. Precendence
 
