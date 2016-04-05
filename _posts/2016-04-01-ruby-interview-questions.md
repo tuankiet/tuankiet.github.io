@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ruby interview questions"
-date: 2016-03-03
+date: 2016-04-01
 categories: ruby
 ---
 
