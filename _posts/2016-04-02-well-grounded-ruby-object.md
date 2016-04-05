@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Well Grounded Rubyist - About Ruby Object"
-date: 2016-03-03
+date: 2016-04-02
 categories: ruby
 ---
 
