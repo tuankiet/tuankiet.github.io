@@ -20,8 +20,18 @@ I. Cấu trúc logic của DB Mysql:
 
 II. Concurrency Control - điều khiển truy cập đồng thời.
 
-Bất cứ khi nào, trong cùng 1 thời gian, thì sẽ luôn có nhiều request yêu cầu change data, đây là vấn đề về điều khiển đồng thời.
+  1. Read locks và Write locks
 
-MySql làm việc này ở 2 level: server level và storage engine level. Concurrency Control là 1 vấn đề lớn, ở đây chỉ overview về cách MySql làm việc về vấn đề này.
+    Bất cứ khi nào, trong cùng 1 thời gian, thì sẽ luôn có nhiều request yêu cầu change data, đây là vấn đề về điều khiển đồng thời.
+    
+    MySql làm việc này ở 2 level: server level và storage engine level. Concurrency Control là 1 vấn đề lớn, ở đây chỉ overview về cách MySql làm việc về vấn đề này.
+    
+    Để giải quyết vấn đề cổ điển này, Hệ thống sẽ sử dụng việc điều khiển khóa, và được hiện thực trong  hệ thống khóa locking system, `shared lock` `exclusive lock` `read lock` và `write lock`. Cơ chế, `read lock` thì mang tính chia sẽ, tại mỗi thời điểm bất kể client nào cũng có khóa read lock để có thể read 1 resource at the same time. Còn với `write lock` là khóa độc quyền, 1 khi client đang có khóa `write lock` thì client này có cả `read lock` và những khóa `write lock` khác vì 1 client khi đang edit 1 resource tại 1 thời điểm thì mysql server sẽ ngăn chặn tất cả việc đọc resource đó đối với những client khác trong khi client này đang writing. Tức là khóa lại hết khi đang edit hoặc update resource (row data, resource data..)
+    
+  2. Lock Granularity - Bản chất khóa
+    
+    Một điều quan trọng trong việc cải thiện chia sẽ resource là việc lựa chọn cái bạn khóa. Việc khóa cả một thực thể lớn sẽ không hiệu quả ảnh hưởng performance, nên ta chỉ cần khóa 1 phần của data mà ta đang muốn thay đổi. Khóa đúng thành phần dữ liệu mà ta muốn thay đổi (best practices). Tối thiểu hóa lượng dữ liệu mà bạn khóa. 
 
-Để giải quyết vấn đề cổ điển này, Hệ thống sẽ sử dụng việc điều khiển khóa, và được hiện thực trong  hệ thống khóa locking system.
+    Với mỗi lock operator, ta phải getting lock, checking lock for free use, releasing lock, and so on -> điều này dễ dẫn đến overrhead. Vấn đề là quản lý lock mà không chú trọng vào công việc chính của DB thì performance giảm.
+
+
