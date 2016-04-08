@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Well Grounded Rubyist - About Ruby Object"
+title: "Ruby Object"
 date: 2016-04-02
 categories: ruby
 ---
@@ -9,26 +9,26 @@ categories: ruby
 
  1. Defining Object behaviors:
  
- ```ruby
- def obj.talk
-   puts "I'm a Object"
- end
- ```
+```ruby
+def obj.talk
+  puts "I'm a Object"
+end
+```
  
  2. Sending message to Object:
  
- `obj.talk` the dot(.) is the message-sending operator. the `message` on right is sent to obj (obj called `receiver`) on the left.
+  `obj.talk` the dot(.) is the message-sending operator. the `message` on right is sent to obj (obj called `receiver`) on the left.
  
- Everything in ruby is object, Every behavior is a method call.
+> Everything in ruby is object, Every behavior is a method call.
  
  `obj.talk` is in real world is `obj.send(:talk)` *send* is a message-sending operator.
  
  send method can call the *private method of class* in public!!!.
  
- ```ruby
- def obj.listen
- end
- ```
+```ruby
+def obj.listen
+end
+```
  
  We can define methods of obj, only belongs to specific obj. The method not store in class of obj, also not store in storge space of obj, the obj only refer to storge space, the method store in the *Singleton Class of obj* and it is a ancester relation (child) with Class super of obj.
  
