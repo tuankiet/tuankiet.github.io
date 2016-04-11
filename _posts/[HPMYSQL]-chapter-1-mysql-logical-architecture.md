@@ -33,5 +33,29 @@ II. Concurrency Control - điều khiển truy cập đồng thời.
     Một điều quan trọng trong việc cải thiện chia sẽ resource là việc lựa chọn cái bạn khóa. Việc khóa cả một thực thể lớn sẽ không hiệu quả ảnh hưởng performance, nên ta chỉ cần khóa 1 phần của data mà ta đang muốn thay đổi. Khóa đúng thành phần dữ liệu mà ta muốn thay đổi (best practices). Tối thiểu hóa lượng dữ liệu mà bạn khóa. 
 
     Với mỗi lock operator, ta phải getting lock, checking lock for free use, releasing lock, and so on -> điều này dễ dẫn đến overrhead. Vấn đề là quản lý lock mà không chú trọng vào công việc chính của DB thì performance giảm.
+    
+    Mysql có 2 cách lock cơ bản là `table locks` và `row locks`
+    
+    `table locks` là khóa table khi  client muốn thực thi trên table ( write, delete, update) thì table này sẽ được lock lại, và các client khác lúc này sẽ không có quyền read và write table này, cho đến khi table này được mở khóa, nhắm tránh gây conflict. Quyền write có độ ưu tiên cao hơn quyền read, nên nếu request nào có quyền write thì được ưu tiên thực thi trước.
+    
+    `row locks` là khóa trên dòng dữ liệu, thường dùng với engine là  InnoDB, và được xây dựng trong engine DB.
+    
+III. Transaction - Engine
+  
+  1. Deadlock
+  
+    `deadlock` xảy ra là khi 2 hay nhiều giao dịch cùng nắm giữ lẫn nhau, yêu cầu trên cùng 1 tài nguyên, phụ thuộc nhau, tạo ra 1 chu kỳ phụ thuộc tiếp diễn. 
 
+  2. Engine
+    
+    Thường chúng ta có 2 engines : InnoDB và MyISAM
 
+    InnoDB là engine thông dụng nhất còn MyISAM có những tính năng về indexing và fulltext search.
+    
+  3. Chọn engine đúng
+  
+    Chúng ta nên chọn engines dựa trên các tiêu chí sau (mục đích sử dụng):
+
+      - Transactions, Backups, Crassh recovery, Larger data: InnoDB.
+      
+      - Special features: MyISAM
