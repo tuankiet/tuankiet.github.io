@@ -9,8 +9,9 @@ categories: ruby
 
 I. Cấu trúc logic của DB Mysql:
 
-  1. Tầng services: bao gồm connection handling, authentication, security khi connect tới DB Mysql (mysql2, jdbc, odbc, pg)
-    - Mỗi client sẽ có 1 luồng làm việc với server mysql, mỗi luồng khi connect thì cần authenticate thông qua username, password, Và mysql server sẽ caching luồng này => mysql server không tạo mới hoặc destroy connect cho những kết nối mới từ client này.
+  - Tầng services: bao gồm connection handling, authentication, security khi connect tới DB Mysql (mysql2, jdbc, odbc, pg)
+  
+    Mỗi client sẽ có 1 luồng làm việc với server mysql, mỗi luồng khi connect thì cần authenticate thông qua username, password, Và mysql server sẽ caching luồng này => mysql server không tạo mới hoặc destroy connect cho những kết nối mới từ client này.
   
   2. Tầng branning: code cho việc truy vấn query, analytis, optimizing, caching data and tất cả những built-in function (data, time, math, encrytion) and những function đụng tới storage engine như stored procedures, triggers, lambda, views.
   
