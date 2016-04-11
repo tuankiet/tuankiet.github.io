@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[HPMYSQL] Chap 1. Mysql Logical Architecture"
-date: 2015-11-17
+date: 2016-04-11
 categories: ruby
 ---
 
