@@ -4,57 +4,57 @@ title: About
 permalink: /about/
 ---
 
+# Summary Information
+
 `Kiet Nguyen (Male - 24 years old - Ho Chi Minh City)`
 
 `Full name: Nguyen Vo Tuan Kiet`
-
-Github profile: [@tuankiet](https://github.com/tuankiet)
-
-[kietdev38@gmail.com](mailto:kietdev38@gmail.com)
 
 `I'm a Ruby On Rails Developer (2 years)`
 
 `I'm a Full-Stack Developer`
 
+# Working Experience
 
-# Work Experience
+June 2016 - Now:
 
+* Web developer in `NUS Technology Company`
 
-Jun 2016 - Present:
+January 2014 - June 2016:
 
-* Web developer in `NUS Technology`
-
-Jan 2014 - June 2016:
-
-* Web developer in `ZIGExN VeNtura`
+* Web developer in `ZIGExN VeNtura Company`
 
 # Education
 
-Apr 2015:
+April 2015:
 
-`Learned Ho Chi Minh City University of Technology`
+`Ho Chi Minh City University of Technology`
 
 # Skills
 
-`Ruby`, `Ruby On Rails`
+`Ruby On Rails`
 
-`Javascripts`, `jQuery`, `AngularJs`, `Reactjs`
+`Javascript`, `jQuery`, `AngularJs`, `ReactJs`
 
 `Bootstrap`, `Semantic-ui`
 
-`Nodejs`, `Expressjs`
+`NodeJs`, `ExpressJs`
 
-`Mysql`, `Mongodb`
+`Mysql`, `Postgresql`, `MongoDB`
 
-`MVC`, `MEAN`
+`MVC`
 
-# Additional info
+`SOLR Search Engine`
 
-Preferred about job description: Full-stack web development, start-up projects.
+`Crawler`
+
+# Additional Information
+
+Preferred about job description: Full-stack web development.
 
 Can work: Back-end, Server deployment, Front-end.
 
 Preferred work location: Ho Chi Minh City
 
-Stay Hungry. Stay foolish.
+End. :$ :$ :$
 
