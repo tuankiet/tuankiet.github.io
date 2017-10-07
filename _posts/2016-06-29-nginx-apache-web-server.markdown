@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Nginx vs Apache"
 date: 2016-06-29
 categories: ruby

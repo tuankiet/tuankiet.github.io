@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Understanding NGINX"
 date: 2016-11-16
 categories: ruby
@@ -130,4 +130,5 @@ server {
 NGINX sẽ dùng fastcgi_pass directive thay thế cho proxy_pass, và sử dụng fastcgi_param để truyền param script_filename và query_string. Giao thức kết nối giữa 2 server là FastCGI protocol.
 
 [Tobe continue...]
+
 

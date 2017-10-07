@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "The art of readable code summary notes"
 date: 2016-10-01
 categories: ruby
@@ -13,7 +13,7 @@ Now I show you 10 ideas for readable code, code not only for yourself understand
 
 * Be specific:
     - `GetPage` --> `DownloadPage`
-* Avoid generics names: 
+* Avoid generics names:
     - not use `tmp` `retval`
 * Attach details:
     - `duration` --> `duration_ms`

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "SOLID fundamental principles"
 date: 2015-11-15
 categories: ruby
@@ -183,7 +183,7 @@ class Square < Rectangle
 end
 {%endhighlight%}
 
-Cái ví dụ trên đã vi phạm nguyên tắc vì đối với class con là `Square` việc gọi hàm `set_height` override method `set_height` của class cha, và hàm này đã modify cả 2 biến instance của class cha, không đúng với ý nghĩa và mục đích sử dụng. 
+Cái ví dụ trên đã vi phạm nguyên tắc vì đối với class con là `Square` việc gọi hàm `set_height` override method `set_height` của class cha, và hàm này đã modify cả 2 biến instance của class cha, không đúng với ý nghĩa và mục đích sử dụng.
 
 __4. I - Interface Segregation Principle (Nguyên tắc tách riêng các interface)__
 
