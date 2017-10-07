@@ -15,3 +15,5 @@ markdown: kramdown
 # Gems
 gems: [jekyll-paginate]
 paginate: 5
+
+theme: jekyll-theme-hacker
