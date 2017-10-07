@@ -6,13 +6,11 @@ permalink: /about/
 
 # Summary Information
 
-`Kiet Nguyen (Male - 24 years old - Ho Chi Minh City)`
+`Kiet Nguyen (Male - 25 years old - Ho Chi Minh City)`
 
 `Full name: Nguyen Vo Tuan Kiet`
 
-`I'm a Ruby On Rails Developer (2 years)`
-
-`I'm a Full-Stack Developer`
+`I'm a Full-Stack Web Developer (3 years)`
 
 # Working Experience
 
@@ -32,11 +30,15 @@ April 2015:
 
 # Skills
 
+`Ruby`
+
 `Ruby On Rails`
 
-`Javascript`, `jQuery`, `AngularJs`, `ReactJs`
+`Server Deployment`
 
-`Bootstrap`, `Semantic-ui`
+`HTML`, `CSS`, `Javascript`, `jQuery`, `AngularJs`
+
+`Bootstrap`
 
 `NodeJs`, `ExpressJs`
 
@@ -56,5 +58,6 @@ Can work: Back-end, Server deployment, Front-end.
 
 Preferred work location: Ho Chi Minh City
 
-End. :$ :$ :$
+Thanks,
 
+Kiet Nguyen
