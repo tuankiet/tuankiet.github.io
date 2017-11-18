@@ -1,16 +1,20 @@
 # Site settings
-title: KietNVT
-home: Home
-sitename: Welcome to my blogs! Stay Hungry. Stay Foolish.
-contact_me: Contact
-email: kietnvt.it@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Welcome to my blogs!
-  Stay Hungry. Stay Foolish.
-baseurl: "" # the subpath of your site, e.g. /blog
+title: "Welcome You :)"
+description: "<%= a blog of one ruby on rails developer. %>"
+sub_description: "<%= I am Kiet %>"
+email: "kietnvt.it@gmail.com"
 url: "https://tuankiet.github.io"
-twitter_username: nvtkiet
-github_username:  tuankiet
+twitter_username: "nvtkiet"
+github_username:  "tuankiet"
+
+# Header Links
+github:
+  is_project_page: true
+  repository_name: "Blog"
+  project_tagline: "Blog"
+  github_profile: "https://github.com/tuankiet"
+  repository_url: "https://github.com/tuankiet/tuankiet.github.io"
+  owner_name: "Tuan Kiet"
 
 # Build settings
 markdown: kramdown
@@ -18,8 +22,6 @@ markdown: kramdown
 # Gems
 gems: [jekyll-paginate]
 paginate: 5
+paginate_path: "/blog/page:num/"
 
-theme: jekyll-theme-hacker
-
-github:
-  repository_url: https://github.com/tuankiet/tuankiet.github.io
+theme: jekyll-theme-architect

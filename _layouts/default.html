@@ -1,38 +1,53 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "vi" }}">
+<html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/footer.css?v=' | append: site.github.build_revision | relative_url }}">
-    {% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" media="screen" type="text/css">
+    <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print" type="text/css">
+    <link rel="stylesheet" href="{{ '/assets/css/kiet.css' | relative_url }}" type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  {% seo %}
   </head>
 
   <body>
-
     <header>
-      <div class="container">
-        <h1>{{ site.title | default: site.github.repository_name }}</h1>
-        <h2>{{ site.sitename | escape }}</a></h2>
-        <section id="downloads">
-          <a href="/" class="btn">Home</a>
-          <a href="/about" class="btn">About</a>
-          <a href="{{ site.github.repository_url }}" class="btn btn-github" target="_blank"><span class="icon"></span>View on GitHub</a>
-        </section>
+      <div class="inner">
+        <a href="{{ '/' | absolute_url }}">
+          <h1>{{ site.title }}</h1>
+        </a>
+        <h2>{{ site.description }}</h2>
+        <h2>{{ site.sub_description }}</h2>
+        <a href="{{ site.github.github_profile }}" class="button"><small>Follow me on</small> GitHub</a>
       </div>
     </header>
 
-    <div class="container">
-      <section id="main_content">
-        {{ content }}
-      </section>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          {{ content }}
+        </section>
+
+        <aside id="sidebar">
+          <p>Menu</p>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Me</a></li>
+          </ul>
+
+          <p>Maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</p>
+        </aside>
+      </div>
     </div>
 
-    {% if jekyll.environment == 'production' %}
-    {% include google-analytics.html %}
+    {% if site.google_analytics %}
+      {% include google-analytics.html %}
     {% endif %}
-
-    {% include footer.html %}
   </body>
 </html>
