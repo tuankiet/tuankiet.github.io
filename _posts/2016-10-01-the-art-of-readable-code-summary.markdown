@@ -1,11 +1,13 @@
 ---
 layout: default
-title: "The art of readable code summary notes"
+title: "The art of readable code: Overview"
 date: 2016-10-01
 categories: ruby
 ---
 
-> Code should be easy to understand.
+> Overview
+
+> Key idea: Code should be easy to understand.
 
 Now I show you 10 ideas for readable code, code not only for yourself understand but also for your teammate understand.
 
