@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Service Objects in Rails"
 date:   2015-12-10
 categories: ruby

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Metaprogramming in Ruby"
 date: 2016-02-16
 categories: ruby

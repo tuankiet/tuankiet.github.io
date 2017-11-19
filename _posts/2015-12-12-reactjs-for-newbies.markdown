@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "ReactJS for newbies"
 date:   2015-12-12
 categories: react

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Ruby interview questions"
 date: 2016-01-26
 categories: ruby

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "The art of readable code: Overview"
 date: 2016-10-01
 categories: ruby

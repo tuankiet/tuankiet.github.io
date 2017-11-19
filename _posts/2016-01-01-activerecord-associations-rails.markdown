@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "ActiveRecord Associations"
 date:   2016-01-01
 categories: ruby

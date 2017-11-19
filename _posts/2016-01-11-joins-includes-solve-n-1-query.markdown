@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Joining tables, Eager loading and Solve N + 1 query!"
 date: 2016-01-11
 categories: ruby

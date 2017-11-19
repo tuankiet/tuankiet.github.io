@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Refactor Model with Presenters, Concerns, Services"
 date: 2016-01-25
 categories: ruby

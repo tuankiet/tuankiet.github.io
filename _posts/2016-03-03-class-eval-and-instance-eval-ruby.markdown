@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Metaprogramming Ruby: class_eval and instance_eval"
 date: 2016-03-03
 categories: ruby

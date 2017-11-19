@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "The art of readable code: Surface level improvements"
 date: 2017-07-19
 categories: ruby

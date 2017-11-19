@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Understanding NGINX"
 date: 2016-11-16
 categories: ruby

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Welcome to Kiet's Diary!"
 date:   2015-10-01
 categories: diary

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Proc + Block & Lambda in Ruby programming"
 date:   2015-11-11
 categories: ruby
