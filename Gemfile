@@ -11,3 +11,4 @@ end
 
 # Add gem theme
 gem "jekyll-theme-architect"
+gem 'jemoji'
