@@ -35,7 +35,7 @@ Example:
 - Use the name that describes the variable values
 - The name "tmp" should be used only in cases when being short-lived-block
 
-### IV. Loop Iterators.  :repeat_one:  :repeat_one:  :repeat_one:
+## IV. Loop Iterators.  :repeat_one:  :repeat_one:  :repeat_one:
 
 Assume we have arrays: clubs , members and cars
 
@@ -64,7 +64,7 @@ Example:
 * j => member_i
 * k => car_k
 
-### V. Attaching extra information into your names.  :key: :key: :key: :point_left:
+## V. Attaching extra information into your names.  :key: :key: :key: :point_left:
 
 - Attaching values withs units:
 
@@ -80,7 +80,7 @@ Example:
 | data        | data_int               | data is a integer type to save DB       |
 | ----------- | ---------------------- | --------------------------------------- |
 
-### VI. Prefer MIN, MAX for Constant Limit.   :eyes: :eyes: :eyes:
+## VI. Prefer MIN, MAX for Constant Limit.   :eyes: :eyes: :eyes:
 
 Example:
 
@@ -106,7 +106,7 @@ Example:
 | Begin | - | - | - | - | End |
 | ----- | - | - | - | - | --- |
 
-### VIII. Naming The Boolean Variable.  :clap: :clap: :clap:
+## VIII. Naming The Boolean Variable.  :clap: :clap: :clap:
 
 Avoid negated terms in a name.
 
@@ -124,7 +124,7 @@ bool use_ssl = true;
 # => case 2 easy to read and understand than case 1
 ```
 
-### IX. Aesthetics - The beautiful codes.  :sparkles: :sparkles: :sparkles:
+## IX. Aesthetics - The beautiful codes.  :sparkles: :sparkles: :sparkles:
 
 Make the beautiful codes:
 
@@ -202,7 +202,7 @@ function onClickSave() {
 
 ```
 
-### X. When put comments in code ?.
+## X. When put comments in code ?.
 
 - Don't comment for short code you can easy understand it. :joy:
 
