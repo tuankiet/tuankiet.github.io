@@ -1,7 +1,7 @@
 # Site settings
 title: "Welcome You :)"
-description: "<%= a blog of one ruby on rails developer. %>"
-sub_description: "<%= I am Kiet %>"
+description: "a blog of one ruby on rails developer."
+sub_description: "I am Kiet"
 email: "kietnvt.it@gmail.com"
 url: "https://tuankiet.github.io"
 twitter_username: "nvtkiet"
