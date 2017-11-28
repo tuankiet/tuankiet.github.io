@@ -24,7 +24,7 @@ gems:
   - jekyll-paginate
   - jemoji
 
-paginate: 5
+paginate: 10
 paginate_path: "/blog/page:num/"
 
 theme: jekyll-theme-architect
