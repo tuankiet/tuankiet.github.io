@@ -90,9 +90,3 @@ DEPENDENCIES
   jekyll-paginate
   jekyll-theme-architect
   jemoji
-
-RUBY VERSION
-   ruby 2.2.0p0
-
-BUNDLED WITH
-   1.13.2

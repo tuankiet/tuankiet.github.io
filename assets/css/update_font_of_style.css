@@ -622,7 +622,7 @@ header h2 {
 
 #main-content {
   float: left;
-  width: 690px; }
+  width: 690px; color: black; }
 
 #main-content img {
   max-width: 100%; }

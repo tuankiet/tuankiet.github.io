@@ -5,7 +5,7 @@ date: 2017-07-19
 categories: ruby
 ---
 
-# Part One of The art of readable code: Surface level improvements
+# Surface level improvements
 
 _KEY IDEA: PACK INFORMATION INTO YOUR NAME._
 
