@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     activesupport (4.2.10)
       i18n (~> 0.7)
@@ -90,3 +90,9 @@ DEPENDENCIES
   jekyll-paginate
   jekyll-theme-architect
   jemoji
+
+RUBY VERSION
+   ruby 2.2.0p0
+
+BUNDLED WITH
+   1.16.1
