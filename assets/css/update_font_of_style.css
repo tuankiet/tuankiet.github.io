@@ -757,10 +757,10 @@ form {
   margin-top: 24px;
   margin-bottom: 8px;
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: #474747;
-  text-indent: 3px; }
+  text-indent: 3px; padding: 5px; }
 
 #main-content h3:before {
   padding-right: 0.3em;
