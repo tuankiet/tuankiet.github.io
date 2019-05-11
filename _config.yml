@@ -1,7 +1,7 @@
 # Site settings
-title: "Hi"
-description: ""
-sub_description: ""
+title: "Today I learn a new thing"
+description: "just a small blog about some technical collection :sweet grinning:"
+
 email: "kietnvt.it@gmail.com"
 url: "https://tuankiet.github.io"
 twitter_username: "nvtkiet"
@@ -20,13 +20,8 @@ github:
 # Build settings
 markdown: kramdown
 
-# Gems
-gems:
-  - jekyll-paginate
-  - jemoji
-
 paginate: 10
 paginate_path: "/blog/page:num/"
 
-theme: jekyll-theme-architect
+theme: jekyll-theme-modernist
 

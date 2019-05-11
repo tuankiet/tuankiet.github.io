@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Understanding NGINX"
 date: 2016-11-16
 categories: ruby
@@ -105,7 +105,13 @@ server {
 }
 ```
 
-Đối với proxy server, ta dùng directive proxy_pass với protocol, name và port của server đích (proxied server). Có 2 điểm để nói ở đây, 1 là những request mà kết thúc bằng những image type như trên (gif, jpg, png) sẽ được phục vụ tại server proxy thông qua thư mục tĩnh /data/images. NGINX sử dụng '~' để biểu thị khả năng matching bằng REGEX của nó. Ý thứ 2 là những request còn lại sẽ được pass qua server đích (location:8080 proxied server).
+Đối với proxy server, ta dùng directive proxy_pass với protocol, name và port của server đích (proxied server). Có 2 điểm để nói ở đây, 1 là những request mà kết thúc bằng những image type như trên (gif, jpg, png) sẽ được phục vụ tại server proxy thông qua thư mục tĩnh /data/images.
+
+NGINX sử dụng `~` để biểu thị khả năng matching bằng REGEX của nó.
+
+Ý thứ 2 là những request còn lại sẽ được pass qua server đích (location:8080 proxied server).
+
+
 
 4. Cài đặt FastCGI proxing
 

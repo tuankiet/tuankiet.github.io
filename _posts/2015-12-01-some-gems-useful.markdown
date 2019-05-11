@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Intro gems: Searchkick, Pundit, Rolify and Draper"
 date: 2015-12-01
 categories: ruby

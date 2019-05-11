@@ -1,6 +1,0 @@
----
----
-
-@import "{{ site.theme }}";
-@import "kiet";
-@import "update_font_of_style";

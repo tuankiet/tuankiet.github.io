@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "The art of readable code: Making control flow easy to read"
 date: 2017-11-28
 categories: ruby

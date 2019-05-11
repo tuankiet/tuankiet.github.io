@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Capistrano and Mina"
 date: 2016-06-28
 categories: ruby

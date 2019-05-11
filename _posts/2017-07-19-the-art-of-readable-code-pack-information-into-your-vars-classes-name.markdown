@@ -1,21 +1,19 @@
 ---
-layout: post
-title: "The art of readable code: Surface level improvements"
+layout: default
+title: "The art of readable code: Pack information into your variables or functions name"
 date: 2017-07-19
 categories: ruby
 ---
 
-# Surface level improvements
+# Pack information into your variables or functions name
 
-_KEY IDEA: PACK INFORMATION INTO YOUR NAME._
-
-## I. Choose specific words, avoiding "empty" words.   :eyes:  :eyes: :eyes:
+## I. Choose specific words, avoiding "empty" words.
 
 Example: GetPage() => "Get" cannot show you the really meaning of behavior. "Get" is empty word, you donot know "The Page" is get from local or database or internet.
 
 Solution: use DownloadPage(), or FetchPage() instead of GetPage().
 
-## II. Finding more "colorful" words. :rainbow: :rainbow: :rainbow:
+## II. Finding more "colorful" words.
 
 - English is a Rich language.
 - Donot be afraid to use "colorful" words.
@@ -30,12 +28,12 @@ Example:
 | make          | create, setup, build, generate, compose |
 | ------------- | --------------------------------------- |
 
-## III. Avoid generic names like "tmp" and "retval". :shit: :shit: :shit:
+## III. Avoid generic names like "tmp" and "retval".
 
 - Use the name that describes the variable values
 - The name "tmp" should be used only in cases when being short-lived-block
 
-## IV. Loop Iterators.  :repeat_one:  :repeat_one:  :repeat_one:
+## IV. Loop Iterators.
 
 Assume we have arrays: clubs , members and cars
 
@@ -64,7 +62,7 @@ Example:
 * j => member_i
 * k => car_k
 
-## V. Attaching extra information into your names.  :key: :key: :key: :point_left:
+## V. Attaching extra information into your names.
 
 - Attaching values withs units:
 
@@ -80,7 +78,7 @@ Example:
 | data        | data_int               | data is a integer type to save DB       |
 | ----------- | ---------------------- | --------------------------------------- |
 
-## VI. Prefer MIN, MAX for Constant Limit.   :eyes: :eyes: :eyes:
+## VI. Prefer MIN, MAX for Constant Limit.
 
 Example:
 
@@ -88,7 +86,7 @@ Example:
 
 - Refactor: MAX_ITEM_IN_CART = 10
 
-### VII. Prefer First, Last, Begin, End for The Ranges.  :eyes: :eyes: :eyes:
+### VII. Prefer First, Last, Begin, End for The Ranges.
 
 Example:
 
@@ -106,7 +104,7 @@ Example:
 | Begin | - | - | - | - | End |
 | ----- | - | - | - | - | --- |
 
-## VIII. Naming The Boolean Variable.  :clap: :clap: :clap:
+## VIII. Naming The Boolean Variable.
 
 Avoid negated terms in a name.
 
@@ -124,13 +122,13 @@ bool use_ssl = true;
 # => case 2 easy to read and understand than case 1
 ```
 
-## IX. Aesthetics - The beautiful codes.  :sparkles: :sparkles: :sparkles:
+## IX. Aesthetics - The beautiful codes.
 
 Make the beautiful codes:
 
 - Column Alignment.
 - Split the code into the paragraph with comment.
-- Make consistent style: consistent is important than the 'right' style. :+1:
+- Make consistent style: consistent is important than the 'right' style.
 
 Example:
 
@@ -204,14 +202,14 @@ function onClickSave() {
 
 ## X. When put comments in code ?.
 
-- Don't comment for short code you can easy understand it. :joy:
+- Don't comment for short code you can easy understand it. :enjoy:
 
-- Don't comment to explain the BAD NAME :shit: => should fix the BAD NAME :shit: instead.
+- Don't comment to explain the BAD NAME => should fix the BAD NAME instead.
 
-- Should comment for the logic , how the code flow run example for cases, if else, swith. :+1:
+- Should comment for the logic , how the code flow run example for cases, if else, swith.
 
-- Should comment to Recording your Thoughts, recording the IDEA of your code. :+1:
+- Should comment to Recording your Thoughts, recording the IDEA of your code. :like:
 
-- Should include the prefix to TAGGING or MARK the dangerous code example: "TODO", "FIXME", "HACK", or something like important thing in code "USER_UPDATE", "CART_CHECKUOT", "UPDATE_ORDER" ... :+1:
+- Should include the prefix to TAGGING or MARK the dangerous code example: "TODO", "FIXME", "HACK", or something like important thing in code "USER_UPDATE", "CART_CHECKUOT", "UPDATE_ORDER" ... :like:
 
 _I have many chapter of The series of the art of readable code. They will be post as soon as possible in future. Keep in touch with me. Many thanks._

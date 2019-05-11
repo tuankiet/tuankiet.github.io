@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Well grounded ruby object"
 date: 2016-02-02
 categories: ruby

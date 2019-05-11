@@ -4,18 +4,14 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Post . awesome . each do | post |</h1>
-
-  <ul class="post-list">
-    <!-- This loops through the paginated posts -->
-    {% for post in paginator.posts %}
-      <h2>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-      </h2>
-      <!-- <li>{{ post.date | date: "%b %-d, %Y" }}</li> -->
-      <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
-    {% endfor %}
-  </ul>
+  <!-- This loops through the paginated posts -->
+  {% for post in paginator.posts %}
+    <h2>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+    </h2>
+    <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+    <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+  {% endfor %}
 
   <div class="pagination">
     {% if paginator.previous_page %}

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "SOLID fundamental principles"
 date: 2015-11-15
 categories: ruby
