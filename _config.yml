@@ -20,7 +20,7 @@ github:
 # Build settings
 markdown: kramdown
 
-paginate: 10
+paginate: 20
 paginate_path: "/blog/page:num/"
 
 theme: jekyll-theme-modernist
