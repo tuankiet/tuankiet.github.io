@@ -4,9 +4,9 @@ title: MySQL Cookbook Chapter - Table Management
 date: 2019-05-02
 ---
 
-## Basic How to Management Tables: Cloning, Copying, Temporary table, Unique Table Name & Determining what storage engine a table
+# Basic How to Management Tables: Cloning, Copying, Temporary table, Unique Table Name & Determining what storage engine a table
 
-# Cloning a Table: You want to create a table that has exactly the same structure as an existing table?
+## Cloning a Table: You want to create a table that has exactly the same structure as an existing table?
 
   - Use CREATE TABLE ... LIKE to clone the table structure. To also copy some or all of the rows from the original table to the new one, use INSERT INTO ... SELECT.
 
@@ -24,7 +24,7 @@ date: 2019-05-02
 
     `INSERT INTO new_table SELECT * FROM original_table;`
 
-# Saving a Query Result in a Table:
+## Saving a Query Result in a Table:
 
   - Problem: You want to save the result from a SELECT statement to a table rather than display it.
 
@@ -124,11 +124,11 @@ date: 2019-05-02
 
 ---
 
-# Creating Temporary Tables:
+## Creating Temporary Tables:
 
-## You need a table only for a short time, after which you want it to disappear automatically
+### You need a table only for a short time, after which you want it to disappear automatically
 
-### Solution: Create a table using the TEMPORARY keyword, and let MySQL take care of removing it
+#### Solution: Create a table using the TEMPORARY keyword, and let MySQL take care of removing it
 
 - Some operations require a table that exists only temporarily and that should disappear when it’s no longer needed. You can, of course, execute a DROP TABLE statement explicitly to remove a table when you’re done with it
 
@@ -172,7 +172,7 @@ mysql> DROP TEMPORARY TABLE mail; mysql> SELECT COUNT(*) FROM mail;
 +----------+
 ```
 
-### Although temporary tables created withCREATETEMPORARYTABLEhave the benefits just discussed, keep the following caveats in mind:
+#### Although temporary tables created withCREATETEMPORARYTABLEhave the benefits just discussed, keep the following caveats in mind:
 
 - To reuse a temporary table within a given session, you must still drop it explicitly before re-creating it. Attempting to create a second temporary table with the same name results in an error.
 
@@ -187,7 +187,7 @@ DROP TEMPORARY TABLE IF EXISTS tbl_name
 
 The TEMPORARY keyword is useful here if the temporary table has already been dropped, to avoid dropping any permanent table that has the same name.
 
-# Generating Unique Table Names:
+## Generating Unique Table Names:
 
 > You need to create a table with a name guaranteed not to exist.
 
@@ -206,7 +206,7 @@ Connection identifiers are another source of unique values. The MySQL server reu
 `SELECT CONNECTION_ID();`
 
 
-# Checking or Changing a Table Storage Engine:
+## Checking or Changing a Table Storage Engine:
 
 To determine a table’s storage engine, you can use any of several statements. To change the table’s engine, use ALTER TABLE with an ENGINE clause.
 
@@ -219,7 +219,7 @@ SHOW TABLE STATUS LIKE 'mail'\G
 ALTER TABLE mail ENGINE = MyISAM;
 ```
 
-# Copying a Table Using mysqldump
+## Copying a Table Using mysqldump
 
 - You want to copy a table or tables, either among the databases managed by a MySQL server, or from one server to another.
 
@@ -231,7 +231,7 @@ ALTER TABLE mail ENGINE = MyISAM;
 
   - `mysql cookbook < mail.sql`
 
-## Copying tables within a single MySQL server
+### Copying tables within a single MySQL server
 
 - Copy a single table to a different database:
 
@@ -271,7 +271,7 @@ ALTER TABLE mail ENGINE = MyISAM;
 
     - `mysql> RENAME mail TO cookbook.mail2;`
 
-## To perform a table-copying operation without an intermediary file, use a pipe:
+### To perform a table-copying operation without an intermediary file, use a pipe:
 
 ```
 mysqldump cookbook mail | mysql other_db
@@ -280,9 +280,9 @@ mysqldump cookbook | mysql other_db
 
 ```
 
-## Copying tables between MySQL servers
+### Copying tables between MySQL servers
 
-### Normal way:
+#### Normal way:
 
 1. SSH to host_A and create file dump at host_A, use mysqldump
 
@@ -290,7 +290,7 @@ mysqldump cookbook | mysql other_db
 
 3. Load the table into that MySQL server’s other_db, use mysql other_db < mail.sql
 
-### Using PIPE way:
+#### Using PIPE way:
 
 - If you can connect to both servers from your local host:
 
