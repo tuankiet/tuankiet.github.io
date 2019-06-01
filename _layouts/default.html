@@ -16,28 +16,33 @@
   </head>
   <body>
     <div class="wrapper">
-      <header {% unless site.description or site.github.project_tagline %} class="without-description" {% endunless %}>
-        <h1>{{ site.title | default: site.github.repository_name }}</h1>
-        {% if site.description or site.github.project_tagline %}
-          <p>{{ site.description | default: site.github.project_tagline }}</p>
-        {% endif %}
+      <header>
+        <h1 class="header">{{ site.title | default: site.github.repository_name }}</h1>
+        <p class="header">{{ site.description | default: site.github.project_tagline }}</p>
+
         <ul>
-          <li><a href="{{ site.url }}">Home<strong>Page</strong></a></li>
-          <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
+            <li><a class="buttons github" href="{{ site.url }}">Homepage</a></li>
         </ul>
+
+        {% if site.github.is_project_page %}
+          <p class="header">This project is maintained by <a class="header name" target="_blank" href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        {% endif %}
+
+        {% if site.github.is_user_page %}
+          <ul>
+            <li><a class="buttons github" href="{{ site.github.owner_url }}">GitHub Profile</a></li>
+          </ul>
+        {% endif %}
       </header>
+
       <section>
-
-      {{ content }}
-
+        {{ content }}
       </section>
+
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
     </div>
-    <footer>
-    {% if site.github.is_project_page %}
-      <p>Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-    {% endif %}
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
 
     {% if site.google_analytics %}
