@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: "SOLID fundamental principles"
 date: 2015-11-15
 categories: ruby

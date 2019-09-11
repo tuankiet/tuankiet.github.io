@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: Install SSL Namecheap for NGINX server
 date: 2018-09-12
 categories: ruby

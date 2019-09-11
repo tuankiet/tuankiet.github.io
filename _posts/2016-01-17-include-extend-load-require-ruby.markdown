@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: "Include vs Extend. Require vs Load"
 date: 2016-01-17
 categories: ruby

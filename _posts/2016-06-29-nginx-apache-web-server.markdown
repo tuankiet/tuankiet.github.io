@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: "Nginx vs Apache"
 date: 2016-06-29
 categories: ruby

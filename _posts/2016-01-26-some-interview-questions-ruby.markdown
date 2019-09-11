@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: "Ruby interview questions"
 date: 2016-01-26
 categories: ruby

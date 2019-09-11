@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "ActiveRecord Associations"
 date:   2016-01-01
 categories: ruby

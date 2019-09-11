@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: "Understanding NGINX"
 date: 2016-11-16
 categories: ruby

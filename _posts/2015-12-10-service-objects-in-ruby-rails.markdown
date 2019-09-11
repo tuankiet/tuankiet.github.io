@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Service Objects in Rails"
 date:   2015-12-10
 categories: ruby

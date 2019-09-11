@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: MySQL Cookbook Chapter - Selecting data from tables basic
 date: 2019-05-01
 ---

@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: "The art of readable code: Overview"
 date: 2016-10-01
 categories: ruby
