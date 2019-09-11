@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: "Adding swap space to an EC2 Amazon Linux instance"
 date: 2017-11-02
 categories: ruby

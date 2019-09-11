@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: Crying with Rails Associations
 date: 2019-04-19
 ---

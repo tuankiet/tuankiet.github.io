@@ -24,4 +24,5 @@ paginate: 20
 paginate_path: "/blog/page:num/"
 
 theme: jekyll-theme-dinky
+github: [metadata]
 

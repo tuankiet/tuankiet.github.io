@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: MySQL Cookbook Chapter - Table Management
 date: 2019-05-02
 ---

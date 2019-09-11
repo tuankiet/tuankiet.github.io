@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: "The art of readable code: Pack information into your variables or functions name"
 date: 2017-07-19
 categories: ruby

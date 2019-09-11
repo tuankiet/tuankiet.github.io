@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: Crying with NGINX Regex matching, IF statement and module http rewrite $1 $2 meaning
 date: 2019-04-22
 ---

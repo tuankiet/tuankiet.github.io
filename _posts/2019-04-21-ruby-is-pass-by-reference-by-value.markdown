@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: Ruby is pass-by-value, but the values it passes are references
 date: 2019-04-21
 ---

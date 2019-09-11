@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: "Split small logs file by logrotate on Linux system"
 date: 2018-09-11
 categories: ruby

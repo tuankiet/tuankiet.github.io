@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: MySQL Cookbook Chapter - Sorting Query Results
 date: 2019-05-03
 ---
