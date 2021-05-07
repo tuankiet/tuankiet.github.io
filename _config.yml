@@ -23,6 +23,6 @@ markdown: kramdown
 paginate: 20
 paginate_path: "/blog/page:num/"
 
-theme: jekyll-theme-dinky
+theme: jekyll-theme-modernist
 github: [metadata]
 
